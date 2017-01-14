@@ -76,26 +76,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCo-n2-fO9">
-                                <rect key="frame" x="39" y="83" width="312" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grG-1y-Vj2">
-                                <rect key="frame" x="172" y="143" width="31" height="30"/>
-                                <state key="normal" title="戻る"/>
-                                <connections>
-                                    <segue destination="Q2i-Rs-Qhe" kind="unwind" unwindAction="unwindWithSegue:" id="qii-gc-sw0"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="VPh-Sc-dZB">
+                                <rect key="frame" x="166" y="308" width="42" height="51"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCo-n2-fO9">
+                                        <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grG-1y-Vj2">
+                                        <rect key="frame" x="0.0" y="20.5" width="42" height="30"/>
+                                        <state key="normal" title="戻る"/>
+                                        <connections>
+                                            <segue destination="Q2i-Rs-Qhe" kind="unwind" unwindAction="unwindWithSegue:" id="qii-gc-sw0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="kCo-n2-fO9" firstAttribute="centerY" secondItem="9uD-7o-FLZ" secondAttribute="centerY" id="HTi-gl-anY"/>
-                            <constraint firstItem="kCo-n2-fO9" firstAttribute="centerX" secondItem="9uD-7o-FLZ" secondAttribute="centerX" id="XLK-Qn-l7z"/>
-                            <constraint firstItem="grG-1y-Vj2" firstAttribute="centerX" secondItem="9uD-7o-FLZ" secondAttribute="centerX" id="sVj-dB-DH5"/>
-                            <constraint firstItem="grG-1y-Vj2" firstAttribute="centerY" secondItem="9uD-7o-FLZ" secondAttribute="centerY" constant="50" id="uqg-t2-8sX"/>
+                            <constraint firstItem="VPh-Sc-dZB" firstAttribute="centerX" secondItem="9uD-7o-FLZ" secondAttribute="centerX" id="CWZ-JP-udH"/>
+                            <constraint firstItem="VPh-Sc-dZB" firstAttribute="centerY" secondItem="9uD-7o-FLZ" secondAttribute="centerY" constant="-200" id="gX7-Qa-BKd"/>
                         </constraints>
                     </view>
                     <connections>
