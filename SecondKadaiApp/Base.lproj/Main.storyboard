@@ -21,34 +21,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="名前を入力してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGq-jU-OLn">
-                                <rect key="frame" x="92" y="51" width="191" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pvd-LC-F4Q">
-                                <rect key="frame" x="172" y="145" width="31" height="30"/>
-                                <state key="normal" title="入力"/>
-                                <connections>
-                                    <segue destination="Yfw-ET-RKc" kind="show" id="cFj-C0-ZkK"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OJj-95-yGo">
-                                <rect key="frame" x="92" y="93" width="179" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rac-NA-9mk">
+                                <rect key="frame" x="101" y="93.5" width="173.5" height="80.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名前を入力して下さい" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RVw-VV-d05">
+                                        <rect key="frame" x="0.0" y="0.0" width="173.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OJj-95-yGo">
+                                        <rect key="frame" x="0.0" y="20.5" width="173.5" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pvd-LC-F4Q">
+                                        <rect key="frame" x="0.0" y="50.5" width="173.5" height="30"/>
+                                        <state key="normal" title="入力"/>
+                                        <connections>
+                                            <segue destination="Yfw-ET-RKc" kind="show" id="cFj-C0-ZkK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="pvd-LC-F4Q" firstAttribute="top" secondItem="OJj-95-yGo" secondAttribute="bottom" constant="10" id="HbV-xA-soF"/>
+                                    <constraint firstItem="OJj-95-yGo" firstAttribute="top" secondItem="RVw-VV-d05" secondAttribute="bottom" constant="10" id="PJW-M4-86L"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="pvd-LC-F4Q" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="100" id="4yD-70-vFr"/>
-                            <constraint firstItem="fGq-jU-OLn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="888-GG-7ma"/>
-                            <constraint firstItem="OJj-95-yGo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="50" id="UFe-Gn-Rb6"/>
-                            <constraint firstItem="OJj-95-yGo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ib3-Dv-Bew"/>
-                            <constraint firstItem="pvd-LC-F4Q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="l4a-Bo-W2s"/>
-                            <constraint firstItem="fGq-jU-OLn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="l4e-BA-9fm"/>
+                            <constraint firstItem="rac-NA-9mk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-200" id="DuU-Fj-jO6"/>
+                            <constraint firstItem="rac-NA-9mk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UE1-IC-0g8"/>
                         </constraints>
                     </view>
                     <connections>
